@@ -17,7 +17,6 @@ public:
                 st.push(a->left);
             
         }
-        return ans;
-        
+        return ans;    
     }
 };
