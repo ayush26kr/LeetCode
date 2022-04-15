@@ -1,4 +1,7 @@
-if(!root) return nullptr;
+class Solution {
+public:
+    TreeNode* trimBST(TreeNode* root, int low, int high) {
+        if(!root) return nullptr;
         
         if(root->val < low) {
             return trimBST(root->right, low, high);
@@ -11,3 +14,4 @@ if(!root) return nullptr;
         
         return root;
     }
+};
