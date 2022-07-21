@@ -1,0 +1,8 @@
+# Write your MySQL query statement below
+select id,
+CASE 
+WHEN p_id is NULL then 'Root'
+when id IN (SELECT p_id from TREE) then 'Inner'
+ELSE 'Leaf'
+END
+AS type from Tree ORDER BY id;
